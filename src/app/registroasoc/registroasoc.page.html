@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Registro Asociacion</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="form" (ngSubmit)="guardarasoc()">
+          <ion-item>
+             <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+           </ion-item>  
+           <ion-item>
+            <ion-input type="text" placeholder="Nombre" formControlName="nombre"></ion-input>
+            </ion-item>
+           <ion-item>
+          <ion-input type="text" placeholder="Direccion" formControlName="direccion"></ion-input>
+            </ion-item>
+            <ion-item>
+            <ion-input type="text" placeholder="Telefono" formControlName="telefono"></ion-input>
+            </ion-item>
+            <ion-item>
+            <ion-input type="text" placeholder="Cif" formControlName="cif"></ion-input>
+            </ion-item>
+            <ion-item>
+            <ion-input type="text" placeholder="Preferencias" formControlName="preferencias"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" placeholder="Password" formControlName="password"></ion-input>
+              </ion-item>
+            <ion-button type="submit" expand="block">Login</ion-button>
+         </form>
+       
+          
+        
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+  </ion-content>

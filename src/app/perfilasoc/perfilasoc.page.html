@@ -1,0 +1,42 @@
+<ion-header style="text-align: center;">
+  <ion-navbar>
+    
+    <ion-buttons class="navbar-logo" slot="start" defaultHref="/">
+      <img defaultHref="/" src="../../assets/img/logo_smallrere.png">
+    </ion-buttons>
+    
+    <ion-button href="/asociacion">Inicio</ion-button>
+   <ion-button slot="start" href="/historial">Historial</ion-button>
+
+   <ion-button href="/perfilasoc">Perfil</ion-button>
+   
+   <ion-button color="warning" href="/Login">Logout</ion-button>
+
+   
+
+   
+
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content *ngFor="let usuario of Usuarios| filtrous:filterperf">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nombre:{{usuario.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Email:{{usuario.email}}
+      <hr>
+      Direccion: {{usuario.direccion}}
+      <hr>
+     CIF: {{usuario.cif}}
+      <hr>
+      Preferencias: {{usuario.preferencias}}
+      <hr>
+      <ion-button (click)="Modificarcuenta(usuario)">Modificar Perfil</ion-button>
+      <hr>
+      <ion-button (click)="Eliminarcuenta(usuario)">Eliminar Perfil</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

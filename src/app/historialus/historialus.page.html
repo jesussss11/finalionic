@@ -1,0 +1,43 @@
+<ion-header style="text-align: center;">
+  <ion-navbar>
+    
+    <ion-buttons class="navbar-logo" slot="start" defaultHref="/">
+      <img defaultHref="/" src="../../assets/img/logo_smallrere.png">
+    </ion-buttons>
+    
+    <ion-button href="/usuario">Inicio</ion-button>
+
+   <ion-button slot="start" href="/historialus">Historial</ion-button>
+
+   <ion-button href="/perfil">Perfil</ion-button>
+
+   <ion-button color="warning" href="/Login">Logout</ion-button>
+
+
+   
+
+  </ion-navbar>
+  
+  
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="3">Donación</ion-col>
+    <ion-col size="3">Nombre Usuario</ion-col>
+    <ion-col size="2">Nombre Asociacion</ion-col>
+    <ion-col size="2">Estado</ion-col>
+    <ion-col size="2">ID</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let peticion of peticiones |filtro:filtre">
+    
+    <ion-col size="3">{{peticion.descripcion}}</ion-col>
+    <ion-col size="3">{{peticion.nombre_user}}</ion-col>
+    <ion-col size="2">{{peticion.nombre_asoc}}</ion-col>
+    <ion-col size="2">{{peticion.estado}}</ion-col>
+    <ion-col size="2" size-md="4" size-lg="2">{{peticion.id}}</ion-col>
+   
+  </ion-row>
+  
+
+</ion-content>
